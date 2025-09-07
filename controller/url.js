@@ -5,6 +5,7 @@ export const shortUrl = async(req,res) =>{
     const shortCode = shortid.generate();
     const newUrl = new Url({shortCode,longUrl})
     await newUrl.save();
-    const shortUrl = `http://localhost:3000/${shortCode}`
+    const shortUrl = `https://url-shortner-1-9snj.onrender.com/${shortCode}`
     res.render('index.ejs',{shortUrl})
+
 }
